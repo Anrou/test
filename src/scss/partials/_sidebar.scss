@@ -1,0 +1,344 @@
+#wrapper__sidebar {
+  position: fixed;
+  left: 0;
+  top:42px;
+  transition: all .4s ease 0s;
+  height: 100%;
+  width: 271px;
+}
+
+.wrapper__item_sidebar{
+  float: left;
+  width: 100%;
+  //margin-bottom: 10px;
+  border-bottom: 1px solid #EFEFEF;
+}
+
+.item__sidebar{
+  float: left;
+  width: 100%;
+  padding: 15px 17px 15px 20px;
+}
+
+.item__sidebar-active{
+  background-color: $sidebar_active;
+  a,p,span,h2,h3,h4{
+    color: $color__white;
+  }
+}
+.item__sidebar-befault{
+  padding-top: 11px;
+  background-color: $sidebar_befault;
+  h2,h3,h4{
+    color: $sidebar_active;
+  }
+}
+.item__application_list,
+.item__notifications_list{
+  display: block;
+  width: 100%;
+
+}
+
+.item_application{
+  float: left;
+  width: 100%;
+  padding: 10px 0 10px;
+  list-style: none;
+  box-shadow: 0 1px  0 0 rgba(255,255,255,0.26);
+  &:last-of-type{
+    box-shadow: none;
+    padding-bottom: 0;
+  }
+}
+
+.item__sidebar_title{
+  float: left;
+  width: 100%;
+  h3{
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
+.status__application{
+  float: left;
+  width: 100%;
+  margin: 0 0 10px 0;
+  span{
+    padding: 2px 10px;
+    border-radius: 40px;
+    font-size: 14px;
+    background-color: $sidebar_status;
+  }
+}
+
+.item_application_info{
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  color: $color__white;
+}
+
+.name__currency{
+  display: block;
+  width: 100%;
+  color: $sidebar_status;
+  font-size: 16px;
+}
+
+.amount__currency{
+  display: inline;
+  margin-left: 10px;
+  color: $color__white;
+}
+
+.item__application_title{
+  float: left;
+  width: 100%;
+  h4{
+    padding: 0 0 0;
+    color: $sidebar_status;
+    i{
+      margin-right: 5px;
+    }
+  }
+}
+
+.contract__name{
+  display: inline;
+  margin-left: 10px;
+  color: $color__white;
+}
+.payment__state{
+  display: inline;
+  margin-left: 13px;
+  padding: 1px 6px 3px;
+  border-radius: 40px;
+  font-size: 11px;
+  &.paid{
+    background-color: $sidebar_active;
+  }
+  &.not_paid{
+    background-color: $not_paid;
+  }
+}
+
+.item__application_name{
+  float: left;
+  width: 100%;
+  span{
+    display: block;
+    width: 100%;
+    color: $color__white;
+    font-size: 16px;
+  }
+}
+
+
+// end application
+
+
+
+
+
+
+.item__notifications{
+  float: left;
+  width: 100%;
+  padding: 10px;
+  list-style: none;
+  background-color: transparent;
+  &:nth-child(odd){
+    background-color: #F0F0F0;
+  }
+}
+
+.sidebar__details_title{
+  float: left;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 0 0 14px 0;
+  border-bottom: 1px solid #EFEFEF;
+  h3{
+    position: relative;
+    font-weight: bold;
+    color: $details_sidebar_title;
+    i{
+      margin-right: 15px;
+      font-size: 28px;
+    }
+    .sidebar__details_notifications{
+      position: absolute;
+      top: -1px;
+      left: 21px;
+      height: 12px;
+      width: 13px;
+      font-size: 11px;
+      text-align: center;
+      background-color:$details_notifications;
+      border-radius: 4px;
+      color: $color__white;
+    }
+  }
+}
+
+.item__notifications_information{
+  display: inline-block;
+  width: 100%;
+  span{
+    font-size: 14px;
+  }
+}
+
+.name__user{
+  float: left;
+  color: $details_sidebar_title;
+  font-weight: 600;
+}
+
+.data__notice{
+  float: right;
+  color: #9CA0A1;
+  .data{
+    margin-right: 5px;
+  }
+}
+
+.item__notifications_description{
+  display: inline-block;
+  width: 100%;
+  .text__description{
+    font-size: 14px;
+    color: $color__text;
+  }
+}
+
+
+// end  _notifications
+
+
+
+.item__leave_notice{
+
+}
+
+.form__message{
+  display: inline-block;
+  width: 100%;
+  border: 1px solid #EFEFEF;
+  border-radius: 4px;
+}
+
+.item__sidebar_message{
+  display: inline-block;
+  width: 100%;
+  .form-group{
+    margin-bottom: 0;
+  }
+  .form-control{
+    border: none;
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.add__files{
+  overflow: hidden;
+}
+
+.add__files,.add__user{
+  float: left;
+  width: 50%;
+  padding: 8px 0  0;
+}
+
+.item__sidebar_sending{
+  display: block;
+  width: 100%;
+}
+
+
+
+.sending__files{
+  position: relative;
+  float: left;
+  width: 50%;
+
+  input[type="file"]{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 45px;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+  i{
+    position: relative;
+    text-align: center;
+    font-size: 2em;
+    padding: 0 15px;
+    cursor: pointer;
+    color: #D6D6D6;
+    &:after{
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 1px;
+      height: 100%;
+      background-color:#EFEFEF ;
+
+    }
+  }
+}
+
+.add__user{
+  display: block;
+  .btn__add_user{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: auto;
+    padding: 0;
+    color: #D6D6D6;
+    i{
+      text-align: center;
+      font-size: 15px;
+      &:after{
+        display: none;
+      }
+    }
+    &:focus,&:active{
+      background-color: transparent;
+      box-shadow: none;
+      outline: none;
+    }
+  }
+}
+
+.wrapper__btn_submit{
+  float: left;
+  width: 50%;
+  button{
+    border: none;
+    width:100%;
+    border-radius: 0;
+    background-color: rgb(77,118,162);
+    color: $color__white;
+    font-weight: 600;
+    &:hover{
+      background-color: rgb(77,118,162);
+      color: $color__white;
+    }
+    &:focus,&:active{
+      outline: none;
+    }
+  }
+}
+
+
+
+//end  leave_notice

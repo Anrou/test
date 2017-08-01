@@ -1,0 +1,135 @@
+
+
+body{
+  position: relative;
+
+}
+
+//main style
+* {  @include box-sizing(); }
+
+html,body{
+  height:100%;
+}
+
+body{
+  margin: 0 auto;
+  max-width: 100%;
+  background: $body-bg;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1em;
+  color: $color__text;
+}
+img {
+  border: none;
+  outline: 0;
+}
+a{
+  text-decoration: none;
+  outline: none;
+  &:focus{
+    outline: none;
+  }
+  &:hover{
+    outline: none;
+  }
+}
+h1,h2, h3,h4,h5,h6{
+  margin: 0;
+  padding: 0;
+  color: $color__text;
+}
+h1{
+  font-size: 36px;
+  font-weight: 400;
+}
+
+h2{
+  font-size: 30px;
+}
+h3{
+  font-size: 16px;
+}
+h4{
+  font-size: 14px;
+}
+
+p{
+  margin: 0;
+}
+ul{
+  padding: 0;
+  margin: 0;
+  li{
+    padding: 0;
+    margin: 0;
+  }
+}
+button{
+  outline: none;
+  &:focus{
+    outline: none;
+  }
+}
+input{
+  outline: none;
+  &:focus{
+    outline: none;
+  }
+}
+.clear:before,
+.clear:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.clear:after {
+  clear: both;
+}
+.clear {
+  zoom: 1;
+}
+section{
+  position: relative;
+  float: left;
+  width: 100%;
+  height: auto;
+  max-width: 1920px;
+}
+
+
+.container {
+  @include m-w768{
+    width: 100%;
+    max-width: 750px;
+  }
+  @include m-w992{
+    width: 100%;
+    max-width: 970px;
+  }
+  @include m-w1200{
+    width: 100%;
+    max-width: 1680px;
+  }
+  width: 100%;
+}
+
+
+.fixed-top{
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  @include m-w768{
+    border-radius: 0;
+  }
+}
+
+.container_page{
+  float: left;
+  padding: 0;
+  height: inherit;
+  width: 100%;
+  margin: 0;
+  border: none;
+}
